@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Geert van Dort</title>
-    <link>http://geert.gent/</link>
+    <link>http://geertvd.github.io/</link>
     <description>Recent content on Geert van Dort</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Jun 2015 14:02:37 +0200</lastBuildDate>
-    <atom:link href="http://geert.gent/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://geertvd.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About</title>
-      <link>http://geert.gent/about/</link>
+      <link>http://geertvd.github.io/about/</link>
       <pubDate>Sat, 20 Jun 2015 14:02:37 +0200</pubDate>
       
-      <guid>http://geert.gent/about/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://geert.gent/data/resume.pdf&#34; title=&#34;Resume&#34;&gt;My resume&lt;/a&gt;&lt;/p&gt;
+      <guid>http://geertvd.github.io/about/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://geertvd.github.io/data/resume.pdf&#34; title=&#34;Resume&#34;&gt;My resume&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I am an experienced Drupal Backend Developer.
 Besides my professional work I contribute to both drupal core and contrib in my free time. I also give talks on local events.&lt;/p&gt;
@@ -29,10 +29,10 @@ Besides my professional work I contribute to both drupal core and contrib in my 
     
     <item>
       <title>Dummy blogpost</title>
-      <link>http://geert.gent/post/blogpost/</link>
+      <link>http://geertvd.github.io/post/blogpost/</link>
       <pubDate>Wed, 13 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://geert.gent/post/blogpost/</guid>
+      <guid>http://geertvd.github.io/post/blogpost/</guid>
       <description>
 
 &lt;h3 id=&#34;write-a-blogpost:630433e5cb9b1be202973053499da225&#34;&gt;&lt;strong&gt;Write a blogpost&lt;/strong&gt;&lt;/h3&gt;

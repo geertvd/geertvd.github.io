@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on Geert van Dort</title>
-    <link>http://geert.gent/about/</link>
+    <link>http://geertvd.github.io/about/</link>
     <description>Recent content in Abouts on Geert van Dort</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Jun 2015 14:02:37 +0200</lastBuildDate>
-    <atom:link href="http://geert.gent/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://geertvd.github.io/about/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>About</title>
-      <link>http://geert.gent/about/</link>
+      <link>http://geertvd.github.io/about/</link>
       <pubDate>Sat, 20 Jun 2015 14:02:37 +0200</pubDate>
       
-      <guid>http://geert.gent/about/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://geert.gent/data/resume.pdf&#34; title=&#34;Resume&#34;&gt;My resume&lt;/a&gt;&lt;/p&gt;
+      <guid>http://geertvd.github.io/about/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://geertvd.github.io/data/resume.pdf&#34; title=&#34;Resume&#34;&gt;My resume&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I am an experienced Drupal Backend Developer.
 Besides my professional work I contribute to both drupal core and contrib in my free time. I also give talks on local events.&lt;/p&gt;
