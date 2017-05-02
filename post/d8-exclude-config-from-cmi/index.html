@@ -1,0 +1,208 @@
+    <!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Geert van Dort">
+		<meta name="description" content="">
+		<meta name="generator" content="Hugo 0.21-DEV" />
+		<title>Drupal 8 - Exclude config from configuration management &middot; Geert van Dort</title>
+		<link rel="shortcut icon" href="http://geertvd.github.io/images/favicon.ico">
+		<link rel="stylesheet" href="http://geertvd.github.io/css/style.css">
+		<link rel="stylesheet" href="http://geertvd.github.io/css/highlight.css">
+		<link rel="stylesheet" href="http://geertvd.github.io/css/monosocialiconsfont.css">
+		
+	</head>
+
+    <body>
+       <nav class="main-nav">
+	
+	
+		<a href='http://geertvd.github.io/'> <span class="arrow">←</span>Home</a>
+	
+
+	<a class="cta" href='http://geertvd.github.io/about'>About</a>
+</nav>
+
+        <section id="wrapper">
+            <article class="post">
+                <header>
+                    <h1>Drupal 8 - Exclude config from configuration management</h1>
+                    <h2 class="headline">May 2, 2017</h2>
+                </header>
+                <section id="post-body">
+                    
+
+<p>Drupal 8 makes it really easy to export and import your entire configuration,
+which makes it easily deployable on all your environments.
+However, this is not always desirable when a customer controls part of that configuration.</p>
+
+<p>Let&rsquo;s take the <a href="https://www.drupal.org/project/webform">webform</a> module as an example.
+Webforms are configuration entities in drupal 8, this means that they are automatically
+exported when doing a <code>config-export</code>, it also means that webforms which have not
+been exported will be removed during <code>config-import</code>, this is what we want to avoid.</p>
+
+<h3 id="exclude-configuration-during-import">Exclude configuration during import</h3>
+
+<p>Enter the <a href="https://www.drupal.org/project/config_ignore">config ignore</a> module,
+config ignore has 1 configuration page which allows you to enter a number of config entities which should be ignored.
+For our webform example we would like to ignore all webform entities,
+except for the contact webform. Our config ignore configuration would look like this:</p>
+
+<pre><code>webform.webform.*
+~webform.webform.contact
+</code></pre>
+
+<p>Doing this already prevents the configuration from being overridden/removed during import (except for the contact webform).
+Just make sure to use the 2.x version of <code>config_ignore</code> since 1.x didn&rsquo;t actually prevent the config from being deleted.</p>
+
+<h3 id="exclude-configuration-during-export">Exclude configuration during export</h3>
+
+<p>While <code>config_import</code> does a great job at avoiding configuration from being
+imported, it doesn&rsquo;t actually prevent that configuration from being exported.
+While there&rsquo;s nothing really wrong with having that configuration exported,
+I find it confusing and I&rsquo;d prefer the ignored configuration to stay out of my repository.</p>
+
+<p>To solve this we can use the <a href="https://www.drupal.org/project/config_split">config split</a> module.
+While <code>config_split</code> allows you to export subsets of configuration to be deployed on different environments
+it also allows you to prevent a subset of configuration from being exported at all.
+Let&rsquo;s see how we can solve this for our webform example.</p>
+
+<p>I created a new config_split entity, let&rsquo;s call it &ldquo;Ignored config&rdquo;, I leave the folder blank,
+this actually causes the configuration to be exported in the database thus preventing
+ignored configuration entities from entering our repository during export.
+Besides that I just added the following in the config_split entity&rsquo;s graylist:</p>
+
+<pre><code>webform.webform.*
+</code></pre>
+
+<p>Adding it to the graylist rather then the blacklist still allows me to forcefully export some
+webform configuration into our repository.</p>
+
+                </section>
+            </article>
+            <footer id="post-meta" class="clearfix">
+                <a href="https://twitter.com/geertvd">
+                        <img class="avatar" src="http://geertvd.github.io/images/avatar.png">
+                        <div>
+                            <span class="dark">Geert van Dort</span>
+                            <span></span>
+                        </div>
+                    </a>
+                <section id="sharing">
+                    <a class="twitter" href="https://twitter.com/intent/tweet?text=http%3a%2f%2fgeertvd.github.io%2fpost%2fd8-exclude-config-from-cmi%2f - Drupal%208%20-%20Exclude%20config%20from%20configuration%20management by @geertvd"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+
+                </section>
+            </footer>
+
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'geertvd';
+    var disqus_identifier = 'http:\/\/geertvd.github.io\/post\/d8-exclude-config-from-cmi\/';
+    var disqus_title = 'Drupal 8 - Exclude config from configuration management';
+    var disqus_url = 'http:\/\/geertvd.github.io\/post\/d8-exclude-config-from-cmi\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            <ul id="post-list" class="archive readmore">
+    <h3>Read more</h3>
+    
+    
+        
+        <li>
+            <a href="http://geertvd.github.io/post/d8-exclude-config-from-cmi/">Drupal 8 - Exclude config from configuration management<aside class="dates">May 2</aside></a>
+        </li>
+        
+   
+    
+        
+   
+    
+        
+   
+    
+        
+        <li>
+            <a href="http://geertvd.github.io/categories/">Categories<aside class="dates">Jan 1</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://geertvd.github.io/">Geert van Dort<aside class="dates">May 2</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://geertvd.github.io/post/">Posts<aside class="dates">May 2</aside></a>
+        </li>
+        
+   
+    
+        
+        <li>
+            <a href="http://geertvd.github.io/tags/">Tags<aside class="dates">Jan 1</aside></a>
+        </li>
+        
+   
+</ul>
+            <footer id="footer">
+    
+        
+<div id="social">
+    
+    <a target="_blank" class="symbol" href="https://www.drupal.org/u/geertvd">
+        circledrupal
+    </a>
+    
+    <a target="_blank" class="symbol" href="https://www.github.com/geertvd">
+        circlegithubalt
+    </a>
+    
+    <a target="_blank" class="symbol" href="https://be.linkedin.com/in/geertvandort">
+        circlelinkedin
+    </a>
+    
+    <a target="_blank" class="symbol" href="https://www.twitter.com/geertvd">
+        circletwitterbird
+    </a>
+    
+</div>
+
+    
+    <p class="small">
+    
+        © Copyright 2017 Geert van Dort
+    
+    </p>
+</footer>
+
+        </section>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://geertvd.github.io/js/main.js"></script>
+<script src="http://geertvd.github.io/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+    </body>
+</html>

@@ -6,21 +6,19 @@
     <description>Recent content in Posts on Geert van Dort</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Jan 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://geertvd.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://geertvd.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
-      <title>Dummy blogpost</title>
-      <link>http://geertvd.github.io/post/blogpost/</link>
-      <pubDate>Wed, 13 Jan 2016 00:00:00 +0000</pubDate>
+      <title>Drupal 8 - Exclude config from configuration management</title>
+      <link>http://geertvd.github.io/post/d8-exclude-config-from-cmi/</link>
+      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://geertvd.github.io/post/blogpost/</guid>
-      <description>
-
-&lt;h3 id=&#34;write-a-blogpost:630433e5cb9b1be202973053499da225&#34;&gt;&lt;strong&gt;Write a blogpost&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;I should write a blogpost&lt;/p&gt;
-</description>
+      <guid>http://geertvd.github.io/post/d8-exclude-config-from-cmi/</guid>
+      <description>Drupal 8 makes it really easy to export and import your entire configuration, which makes it easily deployable on all your environments. However, this is not always desirable when a customer controls part of that configuration.
+Let&amp;rsquo;s take the webform module as an example. Webforms are configuration entities in drupal 8, this means that they are automatically exported when doing a config-export, it also means that webforms which have not been exported will be removed during config-import, this is what we want to avoid.</description>
     </item>
     
   </channel>

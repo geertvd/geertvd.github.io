@@ -7,7 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 20 Jun 2015 14:02:37 +0200</lastBuildDate>
-    <atom:link href="http://geertvd.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="http://geertvd.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>About</title>
@@ -15,15 +17,10 @@
       <pubDate>Sat, 20 Jun 2015 14:02:37 +0200</pubDate>
       
       <guid>http://geertvd.github.io/about/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://geertvd.github.io/files/resume.pdf&#34; target=&#34;_blank&#34; title=&#34;Resume&#34;&gt;My resume&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I am an experienced Drupal Backend Developer.
-Besides my professional work I contribute to both drupal core and contrib in my free time. I also give talks on local events.&lt;/p&gt;
-
-&lt;p&gt;I am maintainer or co-maintainer of drupal modules like &lt;a href=&#34;https://www.drupal.org/project/calendar&#34; target=&#34;blank&#34;&gt;Calendar&lt;/a&gt;, &lt;a href=&#34;https://www.drupal.org/project/views_templates&#34; target=&#34;blank&#34;&gt;Views templates&lt;/a&gt;, &lt;a href=&#34;https://www.drupal.org/project/beforeafter&#34; target=&#34;blank&#34;&gt;BeforeAfter Image formatter&lt;/a&gt; and &lt;a href=&#34;https://www.drupal.org/project/checkmate&#34; target=&#34;blank&#34;&gt;Checkmate&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;My &lt;a href=&#34;https://www.drupal.org/u/geertvd&#34; target=&#34;_bkank&#34;&gt;d.o profile&lt;/a&gt; will tell you more about my involvement in the community.&lt;/p&gt;
-</description>
+      <description>My resume
+I am an experienced Drupal Backend Developer. Besides my professional work I contribute to both drupal core and contrib in my free time. I also give talks on local events.
+I am maintainer or co-maintainer of drupal modules like Calendar, Views templates, BeforeAfter Image formatter and Checkmate.
+My d.o profile will tell you more about my involvement in the community.</description>
     </item>
     
   </channel>
