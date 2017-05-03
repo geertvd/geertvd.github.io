@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
 	<head>
 		<meta charset="utf-8">
@@ -7,7 +7,7 @@
 		<meta name="author" content="Geert van Dort">
 		
 		<meta name="generator" content="Hugo 0.21-DEV" />
-		<title>Geert van Dort</title>
+		<title>Tags &middot; Geert van Dort</title>
 		<link rel="shortcut icon" href="http://geertvd.github.io/images/favicon.ico">
 		<link rel="stylesheet" href="http://geertvd.github.io/css/style.css">
 		<link rel="stylesheet" href="http://geertvd.github.io/css/highlight.css">
@@ -20,9 +20,11 @@
 		
 	</head>
 
-	<body>
-    <nav class="main-nav">
+   <body>
+      <nav class="main-nav">
 	
+	
+		<a href='http://geertvd.github.io/'> <span class="arrow">←</span>Home</a>
 	
 	<a href='http://geertvd.github.io/post'>Archive</a>
 	<a href='http://geertvd.github.io/tags'>Tags</a>
@@ -33,8 +35,7 @@
 	
 </nav>
 
-
-    <div class="profile">
+      <div class="profile">
     <section id="wrapper">
         <header id="header">
             <a href='http://geertvd.github.io/about'>
@@ -46,28 +47,24 @@
     </section>
 </div>
 
-    <section id="wrapper" class="home">
-        <ul id="post-list">
-    
-    
-        
-            <li>
-                <a href='http://geertvd.github.io/post/exclude-config-from-cmi-in-d8/'><aside class="dates">May 2</aside></a>
-                <a href='http://geertvd.github.io/post/exclude-config-from-cmi-in-d8/'>
-                    Exclude config from configuration management in Drupal 8 <h2></h2>
-                </a>
-            </li>
-        
-    
-    
-        
-    
-</ul>
 
-        <nav id="post-nav">
-    
-</nav>
-        <footer id="footer">
+       <section id="wrapper" class="tags">
+           <div class="page-tags" id="tags">
+               
+                <span class="tags">
+                    <a href="/tags/cmi" rel="1">cmi(1)</a>
+                </span>
+               
+                <span class="tags">
+                    <a href="/tags/d8" rel="1">d8(1)</a>
+                </span>
+               
+                <span class="tags">
+                    <a href="/tags/drupal" rel="1">drupal(1)</a>
+                </span>
+               
+           </div>
+           <footer id="footer">
     
         <div id="social">
 
@@ -105,9 +102,9 @@
     </p>
 </footer>
 
-    </section>
+       </section>
 
-    <script src="http://geertvd.github.io/js/jquery-2.2.4.min.js"></script>
+       <script src="http://geertvd.github.io/js/jquery-2.2.4.min.js"></script>
 <script src="http://geertvd.github.io/js/main.js"></script>
 <script src="http://geertvd.github.io/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
@@ -118,5 +115,17 @@
 
 
 
-    </body>
+       <script src="http://geertvd.github.io/js/jquery.tagcloud.js"></script>
+<script type="text/javascript">
+$.fn.tagcloud.defaults = {
+  size: {start: 10, end: 16, unit: 'pt'},
+  color: {start: '#bbb', end: '#f52'}
+};
+
+$(function () {
+  $('#tags a').tagcloud();
+});
+</script>
+
+   </body>
 </html>
