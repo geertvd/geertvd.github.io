@@ -6,7 +6,7 @@
     <description>Recent content on Geert van Dort</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 May 2017 22:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://geertvd.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Exclude config from configuration management in Drupal 8</title>
       <link>http://geertvd.github.io/post/exclude-config-from-cmi-in-d8/</link>
-      <pubDate>Tue, 02 May 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 03 May 2017 22:00:00 +0000</pubDate>
       
       <guid>http://geertvd.github.io/post/exclude-config-from-cmi-in-d8/</guid>
       <description>Drupal 8 makes it really easy to export and import your entire configuration, which makes it easily deployable on all your environments. However, this is not always desirable when a customer controls part of that configuration.
