@@ -18,7 +18,7 @@
       
       <guid>http://geertvd.github.io/post/exclude-config-from-cmi-in-d8/</guid>
       <description>Drupal 8 makes it really easy to export and import your entire configuration, which makes it easily deployable on all your environments. However, this is not always desirable when a customer controls part of that configuration.
-Let&amp;rsquo;s take the webform module as an example. Webforms are configuration entities in drupal 8, this means that they are automatically exported when doing a config-export, it also means that webforms which have not been exported will be removed during config-import, this is what we want to avoid.</description>
+Let&amp;rsquo;s take the webform module as an example. Webforms are configuration entities in drupal 8, this means that they are automatically exported when doing a config-export. It also means that webforms which have not been exported will be removed during config-import.</description>
     </item>
     
   </channel>

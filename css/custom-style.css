@@ -1,0 +1,16 @@
+p > code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-family: Menlo, Monaco, Courier;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+}
+
+p > code::before,
+p > code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
