@@ -44,8 +44,8 @@
                     </h1>
                     <h2 class="headline">
                     May 3, 2017 22:00
-                    · 401 words
-                    · 2 minutes read
+                    · 440 words
+                    · 3 minutes read
                       <span class="tags">
                       
                       
@@ -99,7 +99,10 @@ Let&rsquo;s see how we can solve this for our webform example.</p>
 
 <p>I created a new config split entity, let&rsquo;s call it &ldquo;Ignored config&rdquo;, I leave the folder blank,
 this actually causes the configuration to be exported in the database thus preventing
-ignored configuration entities from entering our repository during export.
+ignored configuration entities from entering our repository during export.<br />
+I also set a negative weight (I set mine to -10), we have to do this to prevent our ignored config split entity
+from overruling the configuration ignored by the config_ignore module.
+(Thanks to <a href="https://www.drupal.org/u/albertski">albertski</a> for noticing this <a href="https://www.drupal.org/node/2883110">issue</a>).<br />
 Besides that I just added the following in the config split entity&rsquo;s graylist:</p>
 
 <pre><code>webform.webform.*
